@@ -2,7 +2,7 @@
 
 import socket,sys,argparse,struct
 
-parser = argparse.ArgumentParser(prog='PyFuzzer', usage='%(prog)s -s/--server <DOMAIN> -p/--port <PORT>', description='Fuzzing for finding vulnerable BoF vulnerabilities')
+parser = argparse.ArgumentParser(prog='PyFuzzer', usage='%(prog)s -s/--server <DOMAIN> -p/--port <PORT> -b/--buffer <BUFFER SIZE> -m/--memaddr <MEMORY ADDR> -n/--nops <NUM OF NOPS> -o/--overflow <EXPLOIT CODE FILE>', description='Python tool for automating simple Buffer Overflow attacks which require TCP sockets')
 parser.add_argument('--server','-s',type=str,help='The host you want to connect with', action='store', required=True)
 parser.add_argument('--port','-p',type=int,help='The port you want to connect to',action='store', required=True)
 parser.add_argument('--data','-d',type=str,help='The payload that needs to prepend the buffer', action='store', default='', required=False)
